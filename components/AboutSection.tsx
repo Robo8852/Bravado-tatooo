@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { SectionHeading } from './SectionHeading';
 import { SITE_DATA } from '../data';
 import { Button } from './Button';
@@ -14,14 +15,20 @@ export const AboutSection = () => {
           
           <div className="order-2 lg:order-1">
             <div className="grid grid-cols-2 gap-4">
-              <img 
-                src="https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&q=80&w=600" 
-                alt="Tattooing process" 
+              <Image
+                src="https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&q=80&w=600"
+                alt="Tattooing process"
+                width={600}
+                height={750}
+                sizes="(max-width: 1024px) 50vw, 25vw"
                 className="rounded-sm object-cover aspect-[4/5] w-full"
               />
-              <img 
-                src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&q=80&w=600" 
-                alt="Barbering process" 
+              <Image
+                src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&q=80&w=600"
+                alt="Barbering process"
+                width={600}
+                height={750}
+                sizes="(max-width: 1024px) 50vw, 25vw"
                 className="rounded-sm object-cover aspect-[4/5] w-full mt-8"
               />
             </div>

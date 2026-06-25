@@ -1,5 +1,8 @@
+'use client';
+
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import Image from 'next/image';
 import { TATTOO_PORTFOLIO, CUTS_PORTFOLIO } from '../data';
 import { SectionHeading } from './SectionHeading';
 
@@ -57,13 +60,14 @@ export const GallerySection = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
-                className="aspect-square bg-bravado-dark overflow-hidden group rounded-sm"
+                className="aspect-square bg-bravado-dark overflow-hidden group rounded-sm relative"
               >
-                <img 
-                  src={item.url} 
-                  alt={item.type} 
+                <Image
+                  src={item.url}
+                  alt={item.type}
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  loading="lazy"
                 />
               </motion.div>
             ))}

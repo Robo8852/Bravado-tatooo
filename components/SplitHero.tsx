@@ -1,4 +1,7 @@
+'use client';
+
 import React from 'react';
+import Image from 'next/image';
 import { motion } from 'motion/react';
 import { Button } from './Button';
 
@@ -12,10 +15,15 @@ export const SplitHero = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <div 
-          className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&q=80&w=1200')" }}
-        >
+        <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-105">
+          <Image
+            src="https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&q=80&w=1200"
+            alt="Tattoo studio"
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover"
+          />
           <div className="absolute inset-0 bg-bravado-dark/70 group-hover:bg-bravado-dark/50 transition-colors duration-500" />
         </div>
         
@@ -42,10 +50,15 @@ export const SplitHero = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.2 }}
       >
-        <div 
-          className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&q=80&w=1200')" }}
-        >
+        <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-105">
+          <Image
+            src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&q=80&w=1200"
+            alt="Barbershop"
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover"
+          />
           <div className="absolute inset-0 bg-bravado-dark/70 group-hover:bg-bravado-dark/50 transition-colors duration-500" />
         </div>
         

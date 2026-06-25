@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { Instagram } from 'lucide-react';
 import { SectionHeading } from './SectionHeading';
 import { BARBERS, BARBER_SERVICES, CUTS_PORTFOLIO } from '../data';
@@ -54,10 +55,12 @@ export const BarberSection = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {BARBERS.map(barber => (
                   <div key={barber.id} className="group">
-                    <div className="aspect-[4/5] overflow-hidden bg-gray-100 mb-4 rounded-sm">
-                      <img 
-                        src={barber.image} 
-                        alt={barber.name} 
+                    <div className="aspect-[4/5] overflow-hidden bg-gray-100 mb-4 rounded-sm relative">
+                      <Image
+                        src={barber.image}
+                        alt={barber.name}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0"
                       />
                     </div>
@@ -76,12 +79,13 @@ export const BarberSection = () => {
               <h3 className="font-display text-2xl uppercase font-bold mb-6 border-b border-gray-200 pb-4">Recent Cuts</h3>
               <div className="grid grid-cols-2 gap-4">
                 {CUTS_PORTFOLIO.map(cut => (
-                  <div key={cut.id} className="aspect-square bg-gray-100 overflow-hidden rounded-sm group">
-                    <img 
-                      src={cut.url} 
-                      alt="Haircut" 
+                  <div key={cut.id} className="aspect-square bg-gray-100 overflow-hidden rounded-sm group relative">
+                    <Image
+                      src={cut.url}
+                      alt="Haircut"
+                      fill
+                      sizes="(max-width: 768px) 50vw, 33vw"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                      loading="lazy"
                     />
                   </div>
                 ))}

@@ -1,5 +1,8 @@
+'use client';
+
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import Image from 'next/image';
 import { Instagram, ChevronDown } from 'lucide-react';
 import { SectionHeading } from './SectionHeading';
 import { ARTISTS, TATTOO_PORTFOLIO, TATTOO_FAQS } from '../data';
@@ -34,9 +37,11 @@ export const TattooSection = () => {
             {ARTISTS.map(artist => (
               <div key={artist.id} className="bg-bravado-surface rounded-sm overflow-hidden group">
                 <div className="aspect-[4/5] overflow-hidden relative">
-                  <img 
-                    src={artist.image} 
-                    alt={artist.name} 
+                  <Image
+                    src={artist.image}
+                    alt={artist.name}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-bravado-dark to-transparent opacity-80" />
@@ -85,13 +90,14 @@ export const TattooSection = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.3 }}
-                  className="aspect-square bg-bravado-surface overflow-hidden group cursor-pointer"
+                  className="aspect-square bg-bravado-surface overflow-hidden group cursor-pointer relative"
                 >
-                  <img 
-                    src={item.url} 
-                    alt={item.category} 
+                  <Image
+                    src={item.url}
+                    alt={item.category}
+                    fill
+                    sizes="(max-width: 768px) 50vw, 33vw"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    loading="lazy"
                   />
                 </motion.div>
               ))}

@@ -46,7 +46,7 @@ export const TATTOO_PORTFOLIO: PortfolioItem[] = [
   { id: "p1", url: "https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&q=80&w=600&h=600", category: "Fine Line" },
   { id: "p2", url: "https://images.unsplash.com/photo-1611558709798-e009c8fd7706?auto=format&fit=crop&q=80&w=600&h=600", category: "Black & Grey" },
   { id: "p3", url: "https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?auto=format&fit=crop&q=80&w=600&h=600", category: "Traditional" },
-  { id: "p4", url: "https://images.unsplash.com/photo-1588636737525-46ee38d7211e?auto=format&fit=crop&q=80&w=600&h=600", category: "Color" },
+  { id: "p4", url: "https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?auto=format&fit=crop&q=80&w=600&h=600", category: "Color" },
   { id: "p5", url: "https://images.unsplash.com/photo-1560707303-4e980ce876ad?auto=format&fit=crop&q=80&w=600&h=600", category: "Black & Grey" },
   { id: "p6", url: "https://images.unsplash.com/photo-1621252179027-94459d278660?auto=format&fit=crop&q=80&w=600&h=600", category: "Fine Line" },
 ];
