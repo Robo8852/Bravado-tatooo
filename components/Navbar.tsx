@@ -20,7 +20,6 @@ export const Navbar = () => {
 
   const navLinks = [
     { name: 'Tattoos', href: '#tattoos' },
-    { name: 'Barbershop', href: '#barbershop' },
     { name: 'Gallery', href: '#gallery' },
     { name: 'About', href: '#about' },
   ];

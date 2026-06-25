@@ -15,9 +15,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'Bravado',
+  title: 'Bravado — Custom Tattoo Studio in Palmetto, FL',
   description:
-    'A premium tattoo studio and barbershop sharing one space and one brand.',
+    'Bravado is a custom tattoo studio in Palmetto, FL, specializing in clean, high-quality work — fine line, black & grey, traditional, and color. By appointment.',
 };
 
 export default function RootLayout({

@@ -24,8 +24,8 @@ export const AboutSection = () => {
                 className="rounded-sm object-cover aspect-[4/5] w-full"
               />
               <Image
-                src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&q=80&w=600"
-                alt="Barbering process"
+                src="https://images.unsplash.com/photo-1564426622559-5af68da63b96?auto=format&fit=crop&q=80&w=600"
+                alt="Tattoo artist at work"
                 width={600}
                 height={750}
                 sizes="(max-width: 1024px) 50vw, 25vw"
@@ -39,24 +39,24 @@ export const AboutSection = () => {
             
             <div className="space-y-6 text-gray-400 text-lg leading-relaxed mb-10">
               <p>
-                Founded in 2024, {SITE_DATA.name} was built on a simple idea: bring two time-honored crafts under one roof. We believe that getting a tattoo and getting a haircut share the same core values—precision, trust, and individual expression.
+                {SITE_DATA.name} is a custom tattoo studio in Palmetto, Florida, built on a simple idea: every tattoo should be designed around you. Great work comes from precision, trust, and individual expression—and the time it takes to do it right.
               </p>
               <p>
-                Our space is designed to be welcoming but with an edge. Whether you're here for a 6-hour sleeve session or a 30-minute fade, you'll find a team of dedicated professionals who take their work seriously without taking themselves too seriously.
+                The space is welcoming but with an edge. Whether you're here for a full sleeve or your first small piece, you'll find a clean, focused environment and an artist who takes the work seriously without taking himself too seriously.
               </p>
               <p>
-                No attitude. Just good cuts and bold ink.
+                No attitude. Just bold, custom ink.
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 border-t border-bravado-surface pt-8">
               <div className="flex-1">
-                <h4 className="font-display font-bold uppercase text-white mb-2">Tattoo Hours</h4>
+                <h4 className="font-display font-bold uppercase text-white mb-2">Studio Hours</h4>
                 <p className="text-gray-400">{SITE_DATA.hours.tattoo}</p>
               </div>
               <div className="flex-1">
-                <h4 className="font-display font-bold uppercase text-white mb-2">Barber Hours</h4>
-                <p className="text-gray-400">{SITE_DATA.hours.barber}</p>
+                <h4 className="font-display font-bold uppercase text-white mb-2">Consultations</h4>
+                <p className="text-gray-400">By appointment</p>
               </div>
             </div>
             

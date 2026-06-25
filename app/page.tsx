@@ -1,7 +1,6 @@
 import {Navbar} from '@/components/Navbar';
 import {SplitHero} from '@/components/SplitHero';
 import {TattooSection} from '@/components/TattooSection';
-import {BarberSection} from '@/components/BarberSection';
 import {GallerySection} from '@/components/GallerySection';
 import {AboutSection} from '@/components/AboutSection';
 import {ContactSection} from '@/components/ContactSection';
@@ -14,7 +13,6 @@ export default function Page() {
       <main>
         <SplitHero />
         <TattooSection />
-        <BarberSection />
         <GallerySection />
         <AboutSection />
         <ContactSection />

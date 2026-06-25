@@ -3,10 +3,16 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import Image from 'next/image';
-import { Instagram, ChevronDown } from 'lucide-react';
+import { ChevronDown, PenTool, ShieldCheck, CalendarCheck } from 'lucide-react';
 import { SectionHeading } from './SectionHeading';
-import { ARTISTS, TATTOO_PORTFOLIO, TATTOO_FAQS } from '../data';
+import { TATTOO_PORTFOLIO, TATTOO_FAQS } from '../data';
 import { Button } from './Button';
+
+const VALUES = [
+  { icon: PenTool, title: 'Custom Work', description: 'Every piece is designed around your idea, placement, and style — never flash off a wall.' },
+  { icon: ShieldCheck, title: 'Clean & Sterile', description: 'Single-use needles and a fully sterilized setup, every session. Clients 18 and older with valid photo ID.' },
+  { icon: CalendarCheck, title: 'By Appointment', description: 'Book a consultation and get a focused, unrushed session — from first sketch to final line.' },
+];
 
 export const TattooSection = () => {
   const [activeFilter, setActiveFilter] = useState<string>('All');
@@ -25,35 +31,22 @@ export const TattooSection = () => {
         <div className="text-center max-w-3xl mx-auto mb-20">
           <SectionHeading title="Tattoo Studio" subtitle="Precision & Craft" />
           <p className="text-gray-400 text-lg">
-            We specialize in custom, high-quality tattoos in a clean, professional, and welcoming environment. 
-            Our artists are dedicated to bringing your vision to life with precision and care.
+            We specialize in custom, high-quality tattoos in a clean, professional, and welcoming environment.
+            Every piece is brought to life with precision and care.
           </p>
         </div>
 
-        {/* Artists */}
+        {/* Why Bravado */}
         <div className="mb-32">
-          <h3 className="font-display text-2xl uppercase font-bold mb-10 text-center border-b border-bravado-surface pb-4">Our Artists</h3>
+          <h3 className="font-display text-2xl uppercase font-bold mb-10 text-center border-b border-bravado-surface pb-4">Why Bravado</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {ARTISTS.map(artist => (
-              <div key={artist.id} className="bg-bravado-surface rounded-sm overflow-hidden group">
-                <div className="aspect-[4/5] overflow-hidden relative">
-                  <Image
-                    src={artist.image}
-                    alt={artist.name}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-bravado-dark to-transparent opacity-80" />
-                  <div className="absolute bottom-0 left-0 p-6 w-full">
-                    <h4 className="font-display text-xl font-bold uppercase mb-1">{artist.name}</h4>
-                    <p className="text-bravado-neon text-sm uppercase tracking-wider mb-3">{artist.specialty}</p>
-                    <a href={artist.instagram} target="_blank" rel="noreferrer" className="inline-flex items-center text-gray-400 hover:text-white transition-colors">
-                      <Instagram size={18} className="mr-2" />
-                      <span className="text-sm">Follow</span>
-                    </a>
-                  </div>
+            {VALUES.map((value) => (
+              <div key={value.title} className="bg-bravado-surface rounded-sm p-8 text-center group">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-sm bg-bravado-neon/10 text-bravado-neon mb-6 group-hover:bg-bravado-neon/20 transition-colors">
+                  <value.icon size={28} />
                 </div>
+                <h4 className="font-display text-xl font-bold uppercase mb-3">{value.title}</h4>
+                <p className="text-gray-400 text-sm leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>
@@ -142,7 +135,7 @@ export const TattooSection = () => {
             <div className="absolute inset-0 bg-bravado-neon/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <h3 className="font-display text-3xl uppercase font-bold mb-4 relative z-10">Ready for Ink?</h3>
             <p className="text-gray-400 mb-8 relative z-10">
-              Fill out our request form with your ideas, placement, and preferred artist. We typically respond within 48 hours.
+              Fill out our request form with your ideas, placement, and size. We typically respond within 48 hours.
             </p>
             <a href="#contact" className="relative z-10 block">
               <Button size="lg" className="w-full">Request a Consultation</Button>

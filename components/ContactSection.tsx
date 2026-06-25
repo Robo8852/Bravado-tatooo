@@ -33,7 +33,7 @@ export const ContactSection = () => {
               <div>
                 <h4 className="font-display font-bold uppercase text-xl mb-2">Location</h4>
                 <p className="text-gray-400">{SITE_DATA.location}</p>
-                <a href="#" className="inline-block mt-2 text-bravado-neon hover:text-white transition-colors text-sm uppercase tracking-wider font-bold">Get Directions &rarr;</a>
+                <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(SITE_DATA.location)}`} target="_blank" rel="noreferrer" className="inline-block mt-2 text-bravado-neon hover:text-white transition-colors text-sm uppercase tracking-wider font-bold">Get Directions &rarr;</a>
               </div>
             </div>
             
@@ -44,7 +44,7 @@ export const ContactSection = () => {
                 <a href={`tel:${SITE_DATA.phone.replace(/[^0-9]/g, '')}`} className="text-gray-400 hover:text-white transition-colors text-lg">
                   {SITE_DATA.phone}
                 </a>
-                <p className="text-gray-500 text-sm mt-1">Call for walk-in availability.</p>
+                <p className="text-gray-500 text-sm mt-1">Call to book a consultation.</p>
               </div>
             </div>
             
@@ -62,12 +62,12 @@ export const ContactSection = () => {
               <h4 className="font-display font-bold uppercase text-xl mb-4">Hours of Operation</h4>
               <div className="space-y-2">
                 <div className="flex justify-between text-gray-400">
-                  <span className="font-medium text-white">Tattoos</span>
+                  <span className="font-medium text-white">Studio</span>
                   <span>{SITE_DATA.hours.tattoo}</span>
                 </div>
                 <div className="flex justify-between text-gray-400">
-                  <span className="font-medium text-white">Barbershop</span>
-                  <span>{SITE_DATA.hours.barber}</span>
+                  <span className="font-medium text-white">Consultations</span>
+                  <span>By appointment</span>
                 </div>
               </div>
             </div>
@@ -105,22 +105,13 @@ export const ContactSection = () => {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-400 uppercase tracking-wider mb-2">Phone</label>
-                    <input type="tel" id="phone" required className="w-full bg-bravado-dark border border-gray-700 rounded-sm px-4 py-3 text-white focus:outline-none focus:border-bravado-neon transition-colors" />
-                  </div>
-                  <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-400 uppercase tracking-wider mb-2">Service</label>
-                    <select id="service" className="w-full bg-bravado-dark border border-gray-700 rounded-sm px-4 py-3 text-white focus:outline-none focus:border-bravado-neon transition-colors appearance-none">
-                      <option value="tattoo">Tattoo Consultation</option>
-                      <option value="barber">Haircut / Barber Service</option>
-                    </select>
-                  </div>
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-400 uppercase tracking-wider mb-2">Phone</label>
+                  <input type="tel" id="phone" required className="w-full bg-bravado-dark border border-gray-700 rounded-sm px-4 py-3 text-white focus:outline-none focus:border-bravado-neon transition-colors" />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-400 uppercase tracking-wider mb-2">Details (Idea, Placement, Artist)</label>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-400 uppercase tracking-wider mb-2">Details (Idea, Placement, Size)</label>
                   <textarea id="message" rows={4} required className="w-full bg-bravado-dark border border-gray-700 rounded-sm px-4 py-3 text-white focus:outline-none focus:border-bravado-neon transition-colors resize-none"></textarea>
                 </div>
 
