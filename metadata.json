@@ -1,0 +1,6 @@
+{
+  "name": "Bravado",
+  "description": "A premium tattoo studio and barbershop sharing one space and one brand.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
