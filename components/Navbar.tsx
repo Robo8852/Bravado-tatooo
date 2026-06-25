@@ -52,8 +52,8 @@ export const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <a href="#contact">
-              <Button size="sm" variant="outline">Book Now</Button>
+            <a href="tel:+19412711301">
+              <Button size="sm" variant="outline">Call Now</Button>
             </a>
           </div>
 
@@ -84,8 +84,8 @@ export const Navbar = () => {
               </a>
             ))}
             <div className="px-3 py-4 text-center">
-              <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
-                <Button className="w-full">Book Now</Button>
+              <a href="tel:+19412711301" onClick={() => setIsMobileMenuOpen(false)}>
+                <Button className="w-full">Call Now</Button>
               </a>
             </div>
           </div>
