@@ -37,7 +37,7 @@ export const SplitHero = () => {
           {SITE_DATA.tagline}
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <a href="#contact">
+          <a href="tel:+19412711301">
             <Button size="lg">Book a Consultation</Button>
           </a>
           <a href="#gallery">
